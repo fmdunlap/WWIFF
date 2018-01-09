@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.fdunlap.projects.wwiff.activities.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_venice_blue">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:background="@drawable/ic_settings_white_36dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/compass"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="28sp"
+        android:text="@string/app_name_full"
+        android:textColor="@android:color/white"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="36dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="bottom">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/twitter_avi_gender_balanced_figure"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFFFFFFF"
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_profile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shadowMarginTop="8dp"
+                app:shadowMarginLeft="16dp"
+                app:shadowMarginRight="8dp"
+                app:shadowMarginBottom="8dp"
+                app:shadowRadius="8dp"
+                app:shadowColor="@color/colorPrimary"
+                android:elevation="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cornerRadiusTR="30dp"
+                app:cornerRadiusBR="30dp"
+                app:cornerRadiusTL="30dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="bottom">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/main_chat_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_280"/>
+                </ScrollView>
+            </com.loopeer.shadow.ShadowView>
+
+            <TextView
+                android:id="@+id/text_view_last_post"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/default_sent"
+                android:layout_margin="8dp"
+                android:paddingStart="20dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

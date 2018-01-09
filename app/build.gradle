@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.fdunlap.projects.wwiff"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile 'info.hoang8f:fbutton:1.0.5'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.loopeer.lib:shadow:0.0.3'
+
+    //Google Dependencies
+    compile 'com.google.android.gms:play-services-auth:11.6.2'
+
+    //Firebase Dependencies
+    compile 'com.google.firebase:firebase-core:11.6.2'
+    compile 'com.google.firebase:firebase-auth:11.6.2'
+
+    implementation 'com.firebaseui:firebase-ui-auth:3.1.2'
+
+    // Required only if Twitter login support is required
+    // Find the latest Twitter SDK releases here: https://goo.gl/E5wZvQ
+    api("com.twitter.sdk.android:twitter-core:3.1.1") { transitive = true }
+
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+}
+
+apply plugin: 'com.google.gms.google-services'

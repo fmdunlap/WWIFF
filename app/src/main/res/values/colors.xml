@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#616161</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#bdbdbd</color>
+
+    <color name="colorVeniceBlueStart">#085078</color>
+    <color name="colorVeniceBlueEnd">#85D8CE</color>
+    <color name="colorVeniceBlueMiddle">#429899</color>
+</resources>
